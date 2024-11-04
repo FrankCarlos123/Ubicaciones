@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Location Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ubicaciones</h1>
+        </div>
+
+        <!-- Vista Principal -->
+        <div id="mainView">
+            <div class="button-container">
+                <button class="btn btn-primary" onclick="toggleSearch()">Buscar</button>
+                <button class="btn btn-danger" onclick="showAddView()">Agregar</button>
+            </div>
+            <div class="qr-grid" id="qrGrid">
+                <!-- QRs se generarán aquí -->
+            </div>
+        </div>
+
+        <!-- Vista Individual -->
+        <div id="singleView" class="single-view">
+            <div class="button-container">
+                <button class="btn btn-primary" onclick="showMainView()">Atrás</button>
+                <button class="btn btn-danger">Agregar</button>
+            </div>
+            <div id="locationInfo"></div>
+            <div class="single-qr" id="currentQR"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
